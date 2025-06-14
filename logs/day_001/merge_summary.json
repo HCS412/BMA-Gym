@@ -1,0 +1,6 @@
+{
+  "selected_clones": ["clone_002", "clone_000", "clone_005"],
+  "merge_weights": [0.5, 0.3, 0.2],
+  "rollback_triggered": false,
+  "val_delta_pp": -0.12
+}
