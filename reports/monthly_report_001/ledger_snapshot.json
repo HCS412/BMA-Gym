@@ -1,0 +1,8 @@
+{
+  "report_month": "2025-04",
+  "git_commit": "d24aef1",
+  "diary_merkle_root": "12d4ac985ae13d29a3bd0f7f59a1e6f4c84e02f9",
+  "verifier_digest_sha256": "a97c45fe9273bd19e6a07bc483...",
+  "auditor_signature": "self-signed-bma-cert",
+  "notes": "No anomaly detected; verifier remained stable."
+}
