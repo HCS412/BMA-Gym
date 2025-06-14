@@ -1,0 +1,29 @@
+[
+  {
+    "step": 1,
+    "prompt": "If Alice has 5 apples and gives Bob 2, how many are left?",
+    "cot": "Alice starts with 5. Giving away 2 means subtracting 2 from 5.",
+    "prediction": "3",
+    "ground_truth": "3",
+    "loss": 0.0021,
+    "uncertainty": 0.09
+  },
+  {
+    "step": 2,
+    "prompt": "Translate 'Je suis fatigué' to English.",
+    "cot": "‘Je suis’ means ‘I am’, and ‘fatigué’ means ‘tired’.",
+    "prediction": "I am tired",
+    "ground_truth": "I am tired",
+    "loss": 0.0003,
+    "uncertainty": 0.04
+  },
+  {
+    "step": 3,
+    "prompt": "Complete the pattern: 2, 4, 6, __",
+    "cot": "The pattern increases by 2 each time: 2→4→6→8.",
+    "prediction": "8",
+    "ground_truth": "8",
+    "loss": 0.0001,
+    "uncertainty": 0.01
+  }
+]
