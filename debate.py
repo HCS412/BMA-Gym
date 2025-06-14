@@ -17,6 +17,12 @@ class DebateEntry:
         entry_str = f"{self.prompt}{self.cot}{self.prediction}"
         return hashlib.sha256(entry_str.encode()).hexdigest()
 
+    def annotate(self) -> Dict[str, float]:
+        return {
+            "loss": self.loss,
+            "uncertainty": self.uncertainty
+        }
+
 
 class Verifier:
     def __init__(self, guardrails: List[str] = None):
@@ -26,8 +32,7 @@ class Verifier:
         return 1.0 if entry.hash() not in seen_hashes else 0.0
 
     def score_coherence(self, entry: DebateEntry) -> float:
-        # Placeholder: a real model would compute semantic coherence
-        return 1.0 - entry.loss
+        return max(0.0, 1.0 - entry.loss)
 
     def check_guardrails(self, entry: DebateEntry) -> bool:
         for rule in self.guardrails:
@@ -51,6 +56,8 @@ class DebateSession:
         self.verifier = verifier
         self.scores = {}
         self.seen_hashes = set()
+        self.annotations = {}
+        self.rollback_candidates = []
 
     def run(self):
         for clone_id, diary in self.clone_diaries.items():
@@ -59,6 +66,13 @@ class DebateSession:
             if not guardrail_ok:
                 score *= 0.5  # Penalize violations
             self.scores[clone_id] = score
+
+            clone_annotations = [entry.annotate() for entry in diary]
+            self.annotations[clone_id] = clone_annotations
+
+            if score < 0.3:  # Example rollback threshold
+                self.rollback_candidates.append(clone_id)
+
             for entry in diary:
                 self.seen_hashes.add(entry.hash())
 
@@ -69,3 +83,9 @@ class DebateSession:
         print("Debate Session Results:")
         for clone_id, score in sorted(self.scores.items(), key=lambda x: x[1], reverse=True):
             print(f"Clone {clone_id}: Score = {score:.3f}")
+
+    def get_rollback_candidates(self) -> List[str]:
+        return self.rollback_candidates
+
+    def get_annotations(self) -> Dict[str, List[Dict[str, float]]]:
+        return self.annotations
