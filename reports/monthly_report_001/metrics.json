@@ -1,0 +1,11 @@
+{
+  "symbol_swap_accuracy": 0.684,
+  "logic_grid_accuracy": 0.642,
+  "gsm_hard_accuracy": 0.45,
+  "mmlu": 0.573,
+  "codeparrot": 0.629,
+  "average_energy_kwh_per_day": 1.4,
+  "adapter_footprint_gb": 2.1,
+  "rollback_count": 2,
+  "guardrail_violations": 0.008
+}
