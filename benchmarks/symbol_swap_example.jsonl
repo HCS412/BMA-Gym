@@ -1,0 +1,2 @@
+{"input": "The apple is red, the fig is yellow, and the grape is orange. What symbol represents banana?", "label": "unknown", "mapping": {"@": "apple", "#": "fig", "$": "grape"}}
+{"input": "The banana is red, the carrot is yellow, and the fig is orange. What symbol represents banana?", "label": "@", "mapping": {"@": "banana", "#": "carrot", "$": "fig"}}
