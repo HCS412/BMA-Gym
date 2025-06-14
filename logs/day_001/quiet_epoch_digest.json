@@ -1,0 +1,6 @@
+{
+  "compression_ratio": 5.3,
+  "vq_vae_tokens": 9841,
+  "forgetting_delta_pp": -0.28,
+  "redundancy_dropped": 71.2
+}
