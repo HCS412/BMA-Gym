@@ -1,0 +1,14 @@
+{
+  "clone_001": {
+    "lora_rank": 16,
+    "init_seed": 18329,
+    "token_budget": 160,
+    "log_days": ["2025-06-01", "2025-06-02"]
+  },
+  "clone_002": {
+    "lora_rank": 16,
+    "init_seed": 29034,
+    "token_budget": 160,
+    "log_days": ["2025-06-01", "2025-06-02"]
+  }
+}
