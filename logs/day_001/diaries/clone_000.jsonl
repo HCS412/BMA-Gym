@@ -1,0 +1,2 @@
+{"input": "If A is before B and C is after A, what is the order?", "label": "A-B-C", "pred": "A-B-C", "loss": 0.12, "uncertainty": 0.09}
+{"input": "Swap the symbols in: {1↔A, 2↔B}", "label": "B-A", "pred": "B-C", "loss": 0.45, "uncertainty": 0.33}
