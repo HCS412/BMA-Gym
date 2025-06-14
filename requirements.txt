@@ -1,0 +1,39 @@
+# Core ML & numerical libraries
+numpy
+pandas
+torch
+scikit-learn
+
+# Transformer models
+transformers
+
+# Logging, training utilities
+tqdm
+matplotlib
+
+# Visualization & plotting
+seaborn
+plotly
+
+# CLI utilities & dev tools
+click
+rich
+
+# File I/O and hashing
+joblib
+
+# Reproducibility
+randomname
+faker
+hashlib
+
+# Optional but nice for reproducibility and benchmarking
+hydra-core
+omegaconf
+
+# Notebook support (optional)
+jupyter
+
+# Safety / audits (if you expand in future)
+langdetect
+nltk
